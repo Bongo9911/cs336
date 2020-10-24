@@ -30,5 +30,6 @@ function createRow(parentElem: HTMLTableElement, rowData : Person) {
     //Create a cell to put the image in and then append the image to the cell
     let imgCell = row.insertCell(5);
     var img = document.createElement('img');
-    img.src = rowData.picture.medium;    imgCell.appendChild(img);
+    img.src = rowData.picture.medium;
+    imgCell.appendChild(img);
 }
