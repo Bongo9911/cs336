@@ -1,0 +1,46 @@
+.card {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-areas: 
+        'img title title title'
+        'img subtitle subtitle subtitle'
+        'img button button button';
+    grid-gap: .25vmax;
+    width: 40vmax;
+}
+
+.logo {
+    height: 10vmax;
+    width: 10vmax;
+    border-width: 100px;
+}
+
+.logo-div {
+    height: 10vmax;
+    width: 10vmax;
+    grid-area: img;
+}
+
+.title {
+    font-size: 3.5vmax;
+    grid-area: title;
+}
+
+.subtitle {
+    font-size: 2vmax;
+    grid-area: subtitle;
+    color: gray;
+}
+
+.find-more-btn {
+    grid-area: button;
+    font-size: 1.75vmax;
+    background-color: seagreen;
+    color: white;
+    border: none;
+}
+
+.shadowed {
+    box-shadow: .4vmax .4vmax .4vmax #888888;
+    border-radius: .75vmax;
+}
