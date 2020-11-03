@@ -20,7 +20,7 @@ export class AppComponent {
     const guess = Number(this.guess);
     if (Math.abs(guess - correctAnswer) / correctAnswer <= this.accuracy / 100) { //correct answer
       this.feedback.push(this.guess + " is close enough! The correct answer was: " + correctAnswer);
-      this.correct = true;
+      this.correct = true; //sets bool to correct to hide the input
     } else if (guess < correctAnswer) { //answer is too low
       this.feedback.push(this.guess + " is too low, guess a higher number");
     } else {    // answer is too high.
@@ -34,6 +34,7 @@ export class AppComponent {
     this.target = Math.floor(Math.random() * (250 - 50 + 1) ) + 50;
   }
 
+  //resets the values to their default so the user can play another round
   reset() {
     this.guess = null;
     this.feedback = [];
