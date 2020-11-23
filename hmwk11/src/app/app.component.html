@@ -1,0 +1,20 @@
+<header>
+  <h1>Dawson's Chat</h1>
+  <span>Enter your handle/name: </span>
+  <input type="text" [(ngModel)]="name" (ngModelChange)="saveName()"/>
+  <br/>
+  <span>Pick a color for your posts: </span>
+  <input [(colorPicker)]="color" [style.background]="color" (colorPickerChange)="saveColor()"/>
+</header>
+
+<div id="chat">
+  <hr/>
+
+  <div *ngFor="let msg of message$">
+    <span id="time">{{msg.timestamp.toDate() | date:"medium"}}</span>
+    <span [style.color]="msg.color"> {{msg.message}}</span>
+  </div>
+  <br/>
+  Enter a message: <input type="text" (keyup.enter)="sendMessage()" [(ngModel)]="message"
+    [style.color]="color" id = "messageInput"/> <button (click)="sendMessage()">Send</button>
+</div>

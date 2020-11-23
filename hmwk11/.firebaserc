@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "dab33chat"
+  },
+  "targets": {
+    "dab33chat": {
+      "hosting": {
+        "hmwk11": [
+          "dab33chat"
+        ]
+      }
+    }
+  }
+}
